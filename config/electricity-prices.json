@@ -1,0 +1,19 @@
+{
+  "apiBaseUrl": "https://www.elprisetjustnu.se/api/v1/prices",
+  "priceArea": "SE4",
+  "currency": "öre/kWh",
+  "slackChannel": "hem",
+  "thresholds": {
+    "cheap": 50,
+    "expensive": 150
+  },
+  "chart": {
+    "width": 800,
+    "height": 400,
+    "colors": {
+      "cheap": "#22c55e",
+      "normal": "#eab308",
+      "expensive": "#ef4444"
+    }
+  }
+}

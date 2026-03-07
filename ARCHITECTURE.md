@@ -10,6 +10,7 @@ Lightweight Node.js scripts — no build step, no bundler, zero external depende
 ├── config/              # Static config/data per job (JSON)
 ├── jobs/                # Thin entry points (one per cron job)
 ├── lib/                 # Shared reusable utilities
+├── run.mjs              # Local test runner (loads .env, runs a job by name)
 ├── .env.example         # Documents all required secrets
 ├── AGENTS.md            # Instructions for AI contributors
 └── ARCHITECTURE.md      # This file
@@ -22,13 +23,15 @@ Lightweight Node.js scripts — no build step, no bundler, zero external depende
 | `config/*.json` | Static data — messages, thresholds, feature flags, non-secret URLs | `{"message": "hello world"}` |
 | `jobs/*.mjs` | Glue — run job, call lib functions | `runJob("x", async (config) => { ... })` |
 | `lib/*.mjs` | Reusable logic — HTTP, integrations, env reading | `fetch.mjs`, `slack.mjs`, `run.mjs` |
-| GitHub Secrets | Sensitive values only — API keys, webhook URLs, tokens | `SLACK_WEBHOOK_URL` |
+| GitHub Secrets | Sensitive values only — API keys, tokens | `SLACK_BOT_TOKEN` |
 
 Config drives behavior. Change what a job does by editing its JSON, not its code.
 
 ## `config/`
 
 One JSON file per job, matching the job filename: `config/hello-world.json` <-> `jobs/hello-world.mjs`.
+
+Global settings live in `config/settings.json` (e.g. `errorChannel` for error notifications). Job-specific configs include a `slackChannel` field to control where messages are posted.
 
 Config is loaded and validated automatically by `runJob`:
 ```js
@@ -51,11 +54,13 @@ Naming matches workflow: `jobs/foo-bar.mjs` <-> `.github/workflows/foo-bar.yml`.
 
 | Module       | Purpose                                              |
 |--------------|------------------------------------------------------|
-| `run.mjs`    | Job runner — config loading, logging, timing, error notification |
-| `config.mjs` | Load and validate a job's JSON config                |
-| `env.mjs`    | Read/validate env vars, redact secrets for logs      |
-| `fetch.mjs`  | HTTP client with retries, timeouts, error types      |
-| `slack.mjs`  | Slack webhook — text and Block Kit messages          |
+| `run.mjs`         | Job runner — config loading, logging, timing, error notification |
+| `config.mjs`      | Load and validate a job's JSON config                |
+| `env.mjs`         | Read/validate env vars, redact secrets for logs      |
+| `fetch.mjs`       | HTTP client with retries, timeouts, error types      |
+| `slack.mjs`       | Slack Web API — text and Block Kit messages (chat.postMessage) |
+| `chart.mjs`       | Build QuickChart.io URLs/short URLs from Chart.js configs |
+| `electricity.mjs` | Fetch SE spot prices, analyze, build price chart configs |
 
 New integrations get a new module in `lib/`.
 
@@ -100,27 +105,46 @@ No `npm install`. No build. Just checkout and run.
 - `.gitignore` blocks `.env` files and `node_modules/`.
 - Error messages never include secret values.
 
+## External Services
+
+| Service | Used by | Purpose | Auth |
+|---|---|---|---|
+| elprisetjustnu.se | `electricity.mjs` | Swedish spot electricity prices (SE1-SE4) | None (free, open) |
+| QuickChart.io | `chart.mjs` | Render Chart.js configs to PNG images via URL | None (free tier) |
+
 ## Secrets Registry
 
 All secrets used in this repo. Add new entries here when introducing new secrets.
 
 | Secret | Used by | Description |
 |---|---|---|
-| `SLACK_WEBHOOK_URL` | All Slack jobs | Slack incoming webhook URL |
+| `SLACK_BOT_TOKEN` | All Slack jobs | Slack bot token (`xoxb-...`) for the Web API |
 
 See `.env.example` for the full list in a copy-pasteable format.
 
 ## Local Testing
 
 ```sh
-# Set required secrets
-export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/..."
+# 1. Copy .env.example and fill in real values
+cp .env.example .env
 
-# Run any job directly
-node jobs/hello-world.mjs
+# 2. Run any job by name
+node run.mjs hello-world
+node run.mjs electricity-prices
 ```
 
-Jobs use the same entry point locally and in CI. No special setup needed beyond env vars.
+`run.mjs` loads `.env` automatically, validates the job exists, and runs it. This is the same code path as CI — no special setup needed beyond the `.env` file.
+
+## Slack Setup
+
+This repo uses the Slack Web API (not webhooks). A Slack app manifest is provided in `slack-app-manifest.yml` for easy setup:
+
+1. Create a Slack app from the manifest at https://api.slack.com/apps
+2. Install the app to your workspace
+3. Copy the bot token (`xoxb-...`) to `SLACK_BOT_TOKEN` in GitHub Actions secrets
+4. Invite the bot to each channel it posts to (`/invite @Cron Notifications`)
+
+The bot requires the `chat:write` scope (already configured in the manifest).
 
 ## Adding a New Cron Job
 

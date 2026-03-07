@@ -17,6 +17,7 @@ Every job requires exactly three files, all sharing the same `<name>`:
 - All static data, messages, URLs (non-secret), thresholds, flags
 - This is where behavior is configured — not in code
 - Keep it flat when possible; nest only when it genuinely aids clarity
+- Include a `slackChannel` field for jobs that post to Slack
 
 ### 2. `jobs/<name>.mjs`
 - Must use `runJob()` from `lib/run.mjs`
@@ -56,6 +57,20 @@ jobs:
 ### 4. Update docs
 - Add new secrets to `.env.example` and the secrets registry in `ARCHITECTURE.md`
 - If you added a new `lib/` module, update the lib table in `ARCHITECTURE.md`
+
+## Global Settings
+
+`config/settings.json` holds repo-wide settings (e.g. `errorChannel` for error notifications). This is loaded by `lib/config.mjs` via `loadSettings()` and used by the job runner for error reporting.
+
+## Slack Integration
+
+- Uses Slack Web API (`chat.postMessage`) with a bot token, NOT webhooks
+- The secret is `SLACK_BOT_TOKEN` — pass it via `env:` in workflow YAML
+- `lib/slack.mjs` exports:
+  - `sendSlackMessage(channel, text)` — plain text messages
+  - `sendSlackBlocks(channel, blocks, fallbackText)` — Block Kit messages
+- Each job config should have a `slackChannel` field (e.g. `"#general"`)
+- The bot must be invited to each channel it posts to
 
 ## Implementing a New Library Module
 
@@ -97,3 +112,5 @@ This is the most important principle. When adding features:
 - Forgetting `workflow_dispatch` in workflow files
 - Forgetting to update `ARCHITECTURE.md` when adding new lib modules or secrets
 - Forgetting `requiredFields` when calling `runJob()`
+- Forgetting `slackChannel` in job configs that post to Slack
+- Using a Slack webhook instead of the bot token (`SLACK_BOT_TOKEN`)
