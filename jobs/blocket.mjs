@@ -14,7 +14,7 @@ await runJob(
     const items = await fetchListings(config.searchUrl);
     console.log(`Fetched ${items.length} listings`);
 
-    const seenIds = await loadSeenIds(config.seenIdsPath);
+    const seenIds = await loadSeenIds();
     const isFirstRun = seenIds === null;
     const newItems = findNewItems(items, seenIds);
 
@@ -30,7 +30,7 @@ await runJob(
     }
 
     const allIds = new Set(items.map((i) => i.id));
-    await saveSeenIds(config.seenIdsPath, allIds);
+    await saveSeenIds(allIds);
   },
-  { requiredFields: ["searchUrl", "slackChannel", "seenIdsPath"] },
+  { requiredFields: ["searchUrl", "slackChannel"] },
 );
