@@ -23,8 +23,8 @@ await runJob(
     } else if (newItems.length > 0) {
       console.log(`Found ${newItems.length} new item(s)`);
       const blocks = buildSlackBlocks(newItems, config.searchUrl);
-      const fallback = `${newItems.length} nya gratisgrejor nara Eslov`;
-      await sendSlackBlocks(config.slackChannel, blocks, fallback);
+      const fallback = `${newItems.length} nya listningar`;
+      await sendSlackBlocks(config.slackChannel, blocks, fallback, { unfurl: false });
     } else {
       console.log("No new items");
     }
