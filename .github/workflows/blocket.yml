@@ -1,0 +1,22 @@
+name: Blocket Free Stuff
+
+on:
+  schedule:
+    - cron: "0 6,10,14,18 * * *"
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node jobs/blocket.mjs
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      - name: Persist seen IDs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/blocket/seen-ids.json
+          git diff --cached --quiet || git commit -m "blocket: update seen IDs"
+          git push

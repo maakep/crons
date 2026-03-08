@@ -8,6 +8,7 @@ Lightweight Node.js scripts — no build step, no bundler, zero external depende
 ```
 ├── .github/workflows/   # One minimal workflow YAML per cron job
 ├── config/              # Static config/data per job (JSON)
+├── data/                # Runtime state persisted across runs (e.g. seen IDs)
 ├── jobs/                # Thin entry points (one per cron job)
 ├── lib/                 # Shared reusable utilities
 ├── run.mjs              # Local test runner (loads .env, runs a job by name)
@@ -61,6 +62,7 @@ Naming matches workflow: `jobs/foo-bar.mjs` <-> `.github/workflows/foo-bar.yml`.
 | `slack.mjs`       | Slack Web API — text and Block Kit messages (chat.postMessage) |
 | `chart.mjs`       | Build QuickChart.io URLs/short URLs from Chart.js configs |
 | `electricity.mjs` | Fetch SE spot prices, analyze, build price chart configs |
+| `blocket.mjs`     | Scrape Blocket search listings, track seen IDs, build Slack blocks |
 
 New integrations get a new module in `lib/`.
 
@@ -111,6 +113,7 @@ No `npm install`. No build. Just checkout and run.
 |---|---|---|---|
 | elprisetjustnu.se | `electricity.mjs` | Swedish spot electricity prices (SE1-SE4) | None (free, open) |
 | QuickChart.io | `chart.mjs` | Render Chart.js configs to PNG images via URL | None (free tier) |
+| blocket.se | `blocket.mjs` | Scrape search listings via server-rendered JSON-LD | None (public page) |
 
 ## Secrets Registry
 
