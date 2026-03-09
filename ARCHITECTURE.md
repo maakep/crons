@@ -63,6 +63,7 @@ Naming matches workflow: `jobs/foo-bar.mjs` <-> `.github/workflows/foo-bar.yml`.
 | `chart.mjs`       | Build QuickChart.io URLs/short URLs from Chart.js configs |
 | `electricity.mjs` | Fetch SE spot prices, analyze, build price chart configs |
 | `blocket.mjs`     | Scrape Blocket search listings, track seen IDs, build Slack blocks |
+| `jobs.mjs`        | Fetch job listings from JobTech API, deduplicate, track seen IDs, build Slack digest |
 
 New integrations get a new module in `lib/`.
 
@@ -114,6 +115,7 @@ No `npm install`. No build. Just checkout and run.
 | elprisetjustnu.se | `electricity.mjs` | Swedish spot electricity prices (SE1-SE4) | None (free, open) |
 | QuickChart.io | `chart.mjs` | Render Chart.js configs to PNG images via URL | None (free tier) |
 | blocket.se | `blocket.mjs` | Scrape search listings via server-rendered JSON-LD | None (public page) |
+| jobsearch.api.jobtechdev.se | `jobs.mjs` | Swedish job listings from Arbetsformedlingen/Platsbanken | None (free, open) |
 
 ## Secrets Registry
 

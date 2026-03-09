@@ -1,4 +1,4 @@
 {
-  "searchUrl": "https://www.blocket.se/recommerce/forsale/search?geoLocationName=Esl%C3%B6v&lat=55.83607&lon=13.37522&price_to=50&radius=30000&trade_type=2",
+  "searchUrl": "https://www.blocket.se/recommerce/forsale/search?geoLocationName=Esl%C3%B6v&lat=55.83607&lon=13.37522&price_to=50&radius=30000&sort=PUBLISHED_DESC&trade_type=2",
   "slackChannel": "blocket"
 }

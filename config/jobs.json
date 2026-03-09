@@ -1,0 +1,18 @@
+{
+  "slackChannel": "jobs",
+  "municipalities": [
+    { "name": "Höör", "conceptId": "N29z_AqQ_Ppc" },
+    { "name": "Hörby", "conceptId": "autr_KMa_cfp" }
+  ],
+  "keywords": [],
+  "sources": {
+    "jobtech": {
+      "enabled": true,
+      "apiBaseUrl": "https://jobsearch.api.jobtechdev.se",
+      "limit": 100
+    }
+  },
+  "dedup": {
+    "titleSimilarityThreshold": 0.7
+  }
+}
