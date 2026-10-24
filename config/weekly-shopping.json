@@ -1,6 +1,7 @@
 {
   "slackChannel": "hem",
   "rotationStartDate": "2026-10-19",
+  "categoryOrder": ["KÖTT, OST & BRÖD", "FRUKT & GRÖNT", "MEJERIPRODUKTER", "MITTENGREJER", "FRYST"],
   "everyWeek": [
     { "name": "Mjölk", "quantity": 1, "category": "MEJERIPRODUKTER" },
     { "name": "iKaffe", "quantity": 1, "category": "MEJERIPRODUKTER" },
