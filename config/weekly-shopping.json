@@ -1,0 +1,340 @@
+{
+  "slackChannel": "hem",
+  "rotationStartDate": "2026-10-19",
+  "everyWeek": [
+    { "name": "Mjölk", "quantity": 1, "category": "MEJERIPRODUKTER" },
+    { "name": "iKaffe", "quantity": 1, "category": "MEJERIPRODUKTER" },
+    { "name": "Veckofrukt", "quantity": 1, "category": "FRUKT & GRÖNT" },
+    { "name": "Bregott", "quantity": 1, "category": "MEJERIPRODUKTER" },
+    { "name": "Knäckebröd", "quantity": 1, "category": "KÖTT, OST & BRÖD" }
+  ],
+  "weeks": [
+    {
+      "name": "week1",
+      "meals": [
+        {
+          "name": "Klyftpotatis med kyckling",
+          "ingredients": [
+            { "name": "Kyckling", "quantity": "2 kg", "category": "MEJERIPRODUKTER" },
+            { "name": "Turkisk yoghurt", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Vitlök", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Potatis", "quantity": 12, "category": "FRUKT & GRÖNT" },
+            { "name": "Sallad", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Tomatsoppa med pasta",
+          "ingredients": [
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Krossade tomater", "quantity": 2, "category": "MITTENGREJER" },
+            { "name": "Grönsaksbuljong", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Grädde", "quantity": "1 dl", "category": "MEJERIPRODUKTER" },
+            { "name": "Risoni", "quantity": "2 dl", "category": "MITTENGREJER" }
+          ]
+        },
+        {
+          "name": "Exotisk fiskgryta med ris",
+          "ingredients": [
+            { "name": "Torsk", "quantity": "1 block", "category": "MITTENGREJER" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Koncentrerad apelsinjuice", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Ingefära", "quantity": 0.5, "category": "FRUKT & GRÖNT" },
+            { "name": "Grädde", "quantity": "5 dl", "category": "MEJERIPRODUKTER" },
+            { "name": "Buljong", "quantity": "1 dl", "category": "MEJERIPRODUKTER" },
+            { "name": "Ris", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Sallad", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Ratatouille med couscous",
+          "ingredients": [
+            { "name": "Aubergine", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Zucchini", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Röd Paprika", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Rödlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Krossade tomater", "quantity": 2, "category": "MITTENGREJER" },
+            { "name": "Buljong", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Couscous", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Ratatouille-kryddor", "quantity": 1, "category": "MITTENGREJER" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "week2",
+      "meals": [
+        {
+          "name": "Nudelwok",
+          "ingredients": [
+            { "name": "Risnudlar", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Morot", "quantity": 0.5, "category": "FRUKT & GRÖNT" },
+            { "name": "Vitkål", "quantity": 0.5, "category": "FRUKT & GRÖNT" },
+            { "name": "Paprika / Zuccini / Broccoli", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Ingefära", "quantity": 0.5, "category": "MITTENGREJER" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Citron", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Chilisås", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Soja", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Ostronsås", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Sesamolja", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Kinesisk kyckling cashew med ris",
+          "ingredients": [
+            { "name": "Kycklingfilé", "quantity": 1, "category": "FRYST" },
+            { "name": "Morot", "quantity": 0.2, "category": "FRUKT & GRÖNT" },
+            { "name": "Vitkål", "quantity": 0.5, "category": "FRUKT & GRÖNT" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Paprika", "quantity": 2, "category": "FRUKT & GRÖNT" },
+            { "name": "Nötter", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Ostronsås", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Hoisinsås", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Sesamolja", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Risvinäger", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Farinsocker", "quantity": "3 msk", "category": "FRUKT & GRÖNT" },
+            { "name": "Risk", "quantity": 1, "category": "MITTENGREJER" }
+          ]
+        },
+        {
+          "name": "Potatismos med lax och citronsås",
+          "ingredients": [
+            { "name": "Lax", "quantity": 4, "category": "FRYST" },
+            { "name": "Potatis", "quantity": 12, "category": "FRUKT & GRÖNT" },
+            { "name": "Mjölk", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Smör", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Mjöl", "quantity": "2 msk", "category": "MITTENGREJER" },
+            { "name": "Buljong", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Citron", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Grädde", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Gröna ärtor", "quantity": 1, "category": "FRYST" },
+            { "name": "Morot", "quantity": 0.5, "category": "FRUKT & GRÖNT" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "week3",
+      "meals": [
+        {
+          "name": "Korvstroganoff med ris",
+          "ingredients": [
+            { "name": "Korv", "quantity": 1, "category": "KÖTT, OST & BRÖD" },
+            { "name": "Krossade tomater", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Grädde", "quantity": 0.5, "category": "MEJERIPRODUKTER" },
+            { "name": "Lök", "quantity": 2, "category": "FRUKT & GRÖNT" },
+            { "name": "Svamp", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Vinäger", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Socker", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Ris", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Sallad", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Bakad potatis med röra",
+          "ingredients": [
+            { "name": "Potatis", "quantity": 12, "category": "FRUKT & GRÖNT" },
+            { "name": "Turkisk Yoghurt", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Rödlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Citron", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Majonnäs", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Tonfisk", "quantity": 2, "category": "MITTENGREJER" },
+            { "name": "Majs", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Ägg", "quantity": 6, "category": "MEJERIPRODUKTER" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Sallad", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Enchiladas",
+          "ingredients": [
+            { "name": "Kycklingfilé", "quantity": 4, "category": "FRYST" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Äpple", "quantity": 2, "category": "FRUKT & GRÖNT" },
+            { "name": "Creme fraiche", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Chillisås", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Tortillabröd", "quantity": 8, "category": "MITTENGREJER" },
+            { "name": "Curry", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Riven ost", "quantity": 1, "category": "KÖTT, OST & BRÖD" },
+            { "name": "Sallad", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "week4",
+      "meals": [
+        {
+          "name": "Pytt-i-panna med ägg och vitlökssås",
+          "ingredients": [
+            { "name": "Morötter", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Palsternacka", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Potatis", "quantity": 6, "category": "FRUKT & GRÖNT" },
+            { "name": "Ägg", "quantity": 8, "category": "MEJERIPRODUKTER" },
+            { "name": "Turkisk yoghurt", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Ketchup", "quantity": 1, "category": "MITTENGREJER" }
+          ]
+        },
+        {
+          "name": "Gulaschsoppa",
+          "ingredients": [
+            { "name": "Kycklingfärs", "quantity": 1, "category": "KÖTT, OST & BRÖD" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Tomatpuré", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Tomater", "quantity": 6, "category": "FRUKT & GRÖNT" },
+            { "name": "Paprikapulver", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Spiskummin", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Buljong", "quantity": 1, "category": "MITTENGREJER" }
+          ]
+        },
+        {
+          "name": "Krämig fiskgryta med torsk & potatis/ris",
+          "ingredients": [
+            { "name": "Torsk", "quantity": 1, "category": "FRYST" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Fiskbuljong", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Grädde", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Cocktailtomater", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Dill", "quantity": 1, "category": "FRYST" },
+            { "name": "Citron", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "week5",
+      "meals": [
+        {
+          "name": "Potatismos med kyckling och brunsås",
+          "ingredients": [
+            { "name": "Kyckling", "quantity": 1, "category": "FRYST" },
+            { "name": "Potatis", "quantity": 12, "category": "FRUKT & GRÖNT" },
+            { "name": "Mjölk", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Smör", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Mjöl", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Kycklingbuljong", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Grädde", "quantity": 0.5, "category": "MEJERIPRODUKTER" },
+            { "name": "Kinesisk soja", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Sallad", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Potatis med purjolökssoppa",
+          "ingredients": [
+            { "name": "Potatis", "quantity": 12, "category": "FRUKT & GRÖNT" },
+            { "name": "Purjolök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Grönsaksbuljong", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Grädde", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Timjan", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Krämig laxpasta med västerbottenost",
+          "ingredients": [
+            { "name": "Lax", "quantity": 1, "category": "FRYST" },
+            { "name": "Pasta", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Västerbottenost", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Grädde", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Spenat", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Citron", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "week6",
+      "meals": [
+        {
+          "name": "Köttfärssås med spaghetti",
+          "ingredients": [
+            { "name": "Morot", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Selleri", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Köttfärs", "quantity": 1, "category": "KÖTT, OST & BRÖD" },
+            { "name": "Krossade tomater", "quantity": 2, "category": "MITTENGREJER" },
+            { "name": "Tomatpuré", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Vinäger", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Socker", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Spiskummin", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Grädde", "quantity": 0.5, "category": "MEJERIPRODUKTER" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Pasta", "quantity": 1, "category": "MITTENGREJER" }
+          ]
+        },
+        {
+          "name": "Sötpotatis med fetasås",
+          "ingredients": [
+            { "name": "Sötpotatis", "quantity": 4, "category": "FRUKT & GRÖNT" },
+            { "name": "Fetaost", "quantity": 2, "category": "MEJERIPRODUKTER" },
+            { "name": "Turkisk yoghurt", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Sallad", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Fisk i mild gräddsås & potatis",
+          "ingredients": [
+            { "name": "Vit fisk", "quantity": 1, "category": "FRYST" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Timjan?", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Fiskbuljong", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Potatis", "quantity": 12, "category": "FRUKT & GRÖNT" },
+            { "name": "Frysta ärtor", "quantity": 1, "category": "FRYST" },
+            { "name": "Dijonsenap", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Grädde", "quantity": 0.5, "category": "MEJERIPRODUKTER" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "week7",
+      "meals": [
+        {
+          "name": "Tacos",
+          "ingredients": [
+            { "name": "Köttfärs", "quantity": 1, "category": "KÖTT, OST & BRÖD" },
+            { "name": "Isbergssallad", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Majs", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Tomater", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Gurka", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Spiskummin", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Ost", "quantity": 1, "category": "KÖTT, OST & BRÖD" },
+            { "name": "Turkisk yoghurt", "quantity": 1, "category": "MEJERIPRODUKTER" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Krossade Tomater", "quantity": 2, "category": "MITTENGREJER" },
+            { "name": "Tortilliabröd", "quantity": 1, "category": "FRUKT & GRÖNT" }
+          ]
+        },
+        {
+          "name": "Fried rice",
+          "ingredients": [
+            { "name": "Ris", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Ägg", "quantity": 2, "category": "MEJERIPRODUKTER" },
+            { "name": "Japansk soja", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Lök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Vitlök", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Sesamolja", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Morötter", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Paprika", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Vitkål", "quantity": 1, "category": "MITTENGREJER" }
+          ]
+        },
+        {
+          "name": "Smörstekt fisk med ärtpesto och krossad potatis",
+          "ingredients": [
+            { "name": "Vit fisk", "quantity": 1, "category": "FRYST" },
+            { "name": "Ärtor", "quantity": 1, "category": "FRYST" },
+            { "name": "Potatis", "quantity": 12, "category": "FRUKT & GRÖNT" },
+            { "name": "Citron", "quantity": 1, "category": "FRUKT & GRÖNT" },
+            { "name": "Solroskärnor", "quantity": 1, "category": "MITTENGREJER" },
+            { "name": "Olivolja", "quantity": 1, "category": "MITTENGREJER" }
+          ]
+        }
+      ]
+    }
+  ]
+}

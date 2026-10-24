@@ -64,6 +64,7 @@ Naming matches workflow: `jobs/foo-bar.mjs` <-> `.github/workflows/foo-bar.yml`.
 | `electricity.mjs` | Fetch SE spot prices, analyze, build price chart configs |
 | `blocket.mjs`     | Scrape Blocket search listings, track seen IDs, build Slack blocks |
 | `jobs.mjs`        | Fetch job listings from JobTech API, deduplicate, track seen IDs, build Slack digest |
+| `shopping.mjs`    | Rotate weekly meal plans and format categorized shopping lists |
 
 New integrations get a new module in `lib/`.
 
@@ -136,6 +137,7 @@ cp .env.example .env
 # 2. Run any job by name
 node run.mjs hello-world
 node run.mjs electricity-prices
+node run.mjs weekly-shopping
 ```
 
 `run.mjs` loads `.env` automatically, validates the job exists, and runs it. This is the same code path as CI — no special setup needed beyond the `.env` file.
